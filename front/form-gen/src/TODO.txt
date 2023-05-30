@@ -1,0 +1,6 @@
+
+
+1. custome conrolValidotrs ,
+2. customeFormValidators,
+3. custome confirmpassword validator 
+4. find where to store input entries metaData

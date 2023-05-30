@@ -1,0 +1,33 @@
+<!-- [ngTemplateOutlet]="outlet"
+ [ngOutletContext]="context" -->
+<ng-template #formTemplate>
+    <p> in template</p>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+        <ng-container >
+            <ng-container formArrayName="entries">
+                <ng-container *ngFor="let entry of entries.controls; let i = index">
+    
+                    <div class="field" >
+                        
+                            <input formGroupName="{{i}}" placeholder="input title">
+                        
+                        <button (click)="deleteInput(i)">delete</button>
+                    </div>
+    
+                </ng-container>
+            </ng-container>
+        </ng-container>
+    </form>
+
+    <button (click)="pushInput()">
+        <i >add</i>
+    </button>
+
+<!-- {{form | json}} -->
+
+</ng-template>
+
+
+
+<ng-container [ngTemplateOutlet]="formTemplate"></ng-container>

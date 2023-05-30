@@ -1,0 +1,39 @@
+:host{
+
+    display: grid;
+    grid-template-rows: minmax(100px,160px) auto auto;
+    grid-template-areas: 
+    "nav"
+    "main"
+    "footer"
+    ;
+
+    // background-color: red;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+
+
+app-nav-bar{
+
+grid-area: nav;
+
+}
+
+app-simple-form{
+
+    grid-area: main;
+
+}
+
+app-footer{
+
+    grid-area: footer;
+
+}
+
+
+
+
